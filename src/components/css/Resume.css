@@ -1,0 +1,33 @@
+h1, h2{
+    margin: 2vw;
+}
+
+.details{
+    color: beige;
+    justify-content: space-between;
+    display: flex;
+    margin-inline: 5vw;
+}
+
+.title{
+    margin-left: 2vw;
+}
+
+.resume-img{
+    width: 20vw;
+    height: 60vh;
+    margin-top: 10vh;
+}
+
+.resume-outline{
+    display: flex;
+}
+
+.resume-image{
+    margin: 2vw;
+}
+
+.resume-content{
+    margin: 2vw;
+    margin-top: 10vh;
+}

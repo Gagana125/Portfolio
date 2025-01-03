@@ -1,0 +1,51 @@
+.card-link {
+    text-decoration: none;
+  }
+  
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-inline: 7vw;
+    background: #ee9ef4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #000;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card.reverse {
+    flex-direction: row-reverse; /* Reverses the layout */
+  }
+  
+  .card-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .card-content {
+    flex: 1;
+    padding: 20px;
+    color: black;
+  }
+  
+  .card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-content p {
+    font-size: 1rem;
+    color: #161616;
+    line-height: 1.5;
+  }
+  

@@ -1,0 +1,37 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f9f9f9;
+    height: 80vh; 
+    background-image: url("/public/assets/bg1.jpg");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    color: gray;
+}
+
+.about-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: teal;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.about-btn:hover {
+    background-color: #004d40;
+}
+  
