@@ -6,4 +6,13 @@
 .social-links a{
     color: inherit;
     text-decoration: none;
+    text-align: center;
+    justify-content: center;
+}
+
+.footer{
+    background-color: #1A1A1D;
+    color: white;
+    text-align: center;
+    padding: 1rem;
 }

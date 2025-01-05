@@ -6,9 +6,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 30px;
-    margin-inline: 7vw;
-    background: #ee9ef4;
+    margin-bottom: 2vh;
+    /* margin-top: 4vh; */
+    width: 60vw;
+    background: #A64D79;
+    /* background: #b3648b; */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -25,9 +27,9 @@
     flex-direction: row-reverse; /* Reverses the layout */
   }
   
-  .card-image img {
-    width: 100%;
-    max-width: 300px;
+  .card-image {
+    width: 20vw;
+    margin-right: 5vw;
     height: auto;
     border-radius: 8px;
   }
@@ -36,6 +38,7 @@
     flex: 1;
     padding: 20px;
     color: black;
+    display: flex;
   }
   
   .card-content h3 {
@@ -48,4 +51,8 @@
     color: #161616;
     line-height: 1.5;
   }
+
+.projects-list{
+  margin-bottom: 5vh;
+}
   

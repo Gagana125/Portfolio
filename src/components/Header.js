@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import './css/Header.css';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState('home');
 
-  // Scroll event handler to update active section
   const handleScroll = () => {
     const sections = document.querySelectorAll('section');
-    const scrollPosition = window.scrollY;
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
+    // console.log(self.offsetHeight);
 
     sections.forEach((section) => {
-      const offsetTop = section.offsetTop - 100;
+      const offsetTop = section.offsetTop;
       const height = section.offsetHeight;
 
       if (scrollPosition >= offsetTop && scrollPosition < offsetTop + height) {
@@ -20,7 +20,6 @@ const Header = () => {
     });
   };
 
-  // Use useEffect to add/remove event listener
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -29,20 +28,31 @@ const Header = () => {
   return (
     <nav className="navbar">
       <h1 className="logo">GAGANA</h1>
-      {/* <img className='logo' src='../assets/logo1.png' alt='logo' /> */}
       <ul className="nav-links">
-        {/* Using Link components from react-router-dom */}
         {['home', 'about', 'resume', 'projects', 'contact'].map((section) => (
           <li
             key={section}
             className={activeSection === section ? 'active' : ''}
           >
-            <Link to={`${section}`} smooth>
+            <Link
+              // to={section === 'home' ? `/` : `${section}`}
+              to={`/`}
+              onClick={() => {
+                document.getElementById(section).scrollIntoView({ behavior: 'smooth', block: 'start', 
+                  inline: 'nearest' });
+                console.log(`Navigated to ${section}`);
+              }}
+            >
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </Link>
           </li>
         ))}
       </ul>
+      {/* <button className="cv-btn"> */}
+      <a href="./assets/myfile.pdf" download>
+    <button className="cv-btn">Download CV</button>
+  </a>
+        {/* Download CV</button> */}
     </nav>
   );
 };

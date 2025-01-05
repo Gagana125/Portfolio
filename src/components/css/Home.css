@@ -3,31 +3,89 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #f9f9f9;
-    height: 80vh; 
-    background-image: url("/public/assets/bg1.jpg");
+    background-color: #bdbdbd;
+    height: 100vh; 
+    /* background-image: url("/public/assets/bg1.jpg"); */
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
-    color: white;
+    color: rgb(255, 255, 255);
+    /* background-blend-mode:color-burn; */
+    background: linear-gradient(rgba(0, 0, 0, 0.2), #A64D79), 
+              url('/public/assets/bg1.jpg') no-repeat center center/cover;
+    /* background: linear-gradient(to top, #A64D79 10%, rgba(0, 0, 0, 0.5) ), url('/public/assets/bg1.jpg') ;           */
+}
+
+.home-content{
+    display: flex;
 }
 
 .home-content h1 {
     font-size: 3rem;
-    margin: 0;
+    margin-top: 20vh;
+    animation: popUp 3s ease-out forwards;
+    opacity: 0.5; /* Initially hidden */
+    transform: scale(0.5);
+}
+
+@keyframes popUp {
+    0% {
+      opacity: 0;
+      transform: scale(0.5); /* Start small */
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(1.2); /* Slightly larger */
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1); /* Normal size */
+    }
 }
 
 .home-content p {
-    font-size: 1.2rem;
-    color: gray;
+    font-size: 1.5rem;
+    color: #bfa5bb;
+    /* margin-top: 5vh; */
+    animation: popUp2 3s ease-out forwards;
+    opacity: 0; /* Initially hidden */
+    transform: scale(1.2);
+}
+
+@keyframes popUp2 {
+    0% {
+      opacity: 0;
+      transform: opacity(0); /* Start small */
+    }
+    50% {
+      opacity: 0.7;
+      transform: opacity(0.5); /* Slightly larger */
+    }
+    100% {
+      opacity: 1;
+      transform: opacity(1); /* Normal size */
+    }
+}
+
+.home-img-container{
+    width: 40vw;
+    height: 80vh;
+    border-radius: 10px;
+    border: #6A1E55;
+}
+
+.home-img {
+    width: 25vw;
+    height: 65vh;
+    border-radius: 10px;
 }
 
 .about-btn {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: teal;
+    background-color: #6A1E55;
     color: white;
-    border: none;
+    border-radius: 10px;
     cursor: pointer;
 }
 

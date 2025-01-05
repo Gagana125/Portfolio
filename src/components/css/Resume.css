@@ -1,26 +1,36 @@
-h1, h2{
+/* h1, h2{
     margin: 2vw;
-}
+} */
 
 .details{
-    color: beige;
+    color: rgb(0, 0, 0);
     justify-content: space-between;
     display: flex;
     margin-inline: 5vw;
+    width: 45vw;
+}
+
+.details p{
+    font-size: 1.1em;
 }
 
 .title{
     margin-left: 2vw;
+    font: 1em sans-serif;
+    font-weight: bold;
 }
 
 .resume-img{
-    width: 20vw;
-    height: 60vh;
-    margin-top: 10vh;
+    width: 18vw;
+    height: 50vh;
+    box-shadow: 0 8px 8px #6A1E55;
+    border-radius: 10px;
 }
 
 .resume-outline{
     display: flex;
+    justify-content: space-evenly;
+    /* margin-top: 2vh; */
 }
 
 .resume-image{
@@ -29,5 +39,38 @@ h1, h2{
 
 .resume-content{
     margin: 2vw;
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
+    align-items: center;
+}
+
+.tech-stack{
+    display: flex;
+    width: 100%;
+    list-style: none;
+}
+
+
+.tech-stack-outline{
+    float: left;
+    justify-self: flex-start;
+    width: 100%;
+    padding-bottom: 5vh;
+}
+
+.tech-stack-list{
+    width: 40vw;
+    margin-right: 5vw;
+}
+
+.bg-custom-bar {
+    background-color: #6A1E55;
+}
+
+.tech-name{
+    margin-bottom: 1vh;
+    margin-top: 3vh;
+}
+
+.resume-heading{
+    margin-bottom: 2vh;
 }

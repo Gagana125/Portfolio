@@ -4,48 +4,49 @@ import Card from './UI/Card';
 const projectsData = [
   {
     id: 1,
-    image: '/assets/images/bg1.jpg', // Replace with actual image paths
+    image: '/assets/projects/1.jpg',
     title: 'Institute Management System',
-    description: 'This is a brief description of project 1.',
+    description: 'The Institute Management System allows students to enroll in courses, make online payments, and access teaching materials for their classes. Teachers can reserve available class slots and upload relevant materials, which students can view and download.',
     reverse: false, // This determines if image is on the left or right
   },
   {
     id: 2,
-    image: '/assets/images/project2.jpg',
+    image: '/assets/projects/2.jpg',
     title: 'Travel Mate',
-    description: 'This is a brief description of project 2.',
+    description: 'The mobile application for traveling in Sri Lanka enables travelers to book trips and accommodations, make secure payments, and search options based on preferences. Travel guides can create and publish public trips, register to offer services, and vendors can sell products and services on the platform.',
     reverse: true,
   },
   {
     id: 3,
-    image: '/assets/images/project3.jpg',
+    image: '/assets/projects/3.jpg',
     title: 'Content Management System - AR',
-    description: 'This is a brief description of project 3.',
+    description: 'This is a  Content Management System (CMS) for an interactive Augmented Reality (AR) platform, enabling users to customize the behavior of 3D models. Users could assign specific actions to 3D models, such as changing colors, navigating to external links, playing audio or video, displaying images, and resizing objects when clicked. The CMS provided a flexible interface for mapping targets (3D models) to specific content, allowing personalized AR experiences.',
     reverse: false,
   },
   {
     id: 4,
-    image: '/assets/images/project3.jpg',
-    title: 'Illumination for App based AR',
-    description: 'This is a brief description of project 4.',
+    image: '/assets/projects/4.jpg',
+    title: 'Illumination for App based AR - Research Project',
+    description: 'This research focuses on enhancing the realism of app-based Augmented Reality (AR) by dynamically identifying physical light sources and applying them in real time to render virtual objects with realistic shadows and reflections. Using only a mobile phone, the study leverages ARCore, and image processing to determine light direction from a live video stream. ',
     reverse: false,
   },
 ];
 
 function Projects() {
   return (
-    <div className="projects">
-      <h2>My Projects</h2>
+    <section id='projects' className="projects">
+      <h1 className='heading2'>My Projects</h1>
       <div className="projects-list">
         {projectsData.map((project) => (
-          <Card key={project.id} 
-            project={project} 
+          <Card key={project.id}
+            project={project}
             image={project.image}
-            paragraph={project.description}  
-            link={`/projects/${project.id}`}/>
+            title={project.title}
+            paragraph={project.description}
+            link={`/projects/${project.id}`} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

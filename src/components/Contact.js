@@ -3,29 +3,14 @@ import './css/Contact.css';
 
 const Contact = () => {
   return (
-    <div className="contact-container">
-      <h1>Contact Me</h1>
+    <section id="contact" className="contact-container">
+      <h1 className="heading">Contact Me</h1>
       <div className="contact-content">
-        {/* Contact Form */}
-        <div className="contact-form">
-          <form>
-            <div className="form-group">
-              <input type="text" placeholder="First name" />
-              <input type="text" placeholder="Last name" />
-            </div>
-            <div className="form-group">
-              <input type="email" placeholder="Email address" />
-            </div>
-            <div className="form-group">
-              <textarea placeholder="Message"></textarea>
-            </div>
-            <button type="submit" className="submit-btn">Send Message</button>
-          </form>
+      <div className="contact-img-container">
+        <img className="contact-img" src="./assets/cont2.jpg" alt="" />
         </div>
-
         {/* Contact Info */}
         <div className="contact-info">
-          <h2>Contact Info</h2>
           <ul>
             <li>
               <i className="fa fa-map-marker"></i> 210, Wele Pansala Rd, Kuda Waskaduwa, Waskaduwa
@@ -34,15 +19,24 @@ const Contact = () => {
               <i className="fa fa-phone"></i> +94 763818641
             </li>
             <li>
-              <i className="fa fa-envelope"></i> gbeyandi@gmail.com
+              <i className="fa fa-envelope"></i> gbeyandi27@gmail.com
             </li>
-            {/* <li>
-              <i className="fa fa-globe"></i> https://Colorlib/
-            </li> */}
+            <li>
+              <a href="https://github.com/Gagana125" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-github" ></i> GitHub
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/gagana-samarasekara/" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-linkedin" ></i> LinkedIn
+              </a>
+            </li>
           </ul>
         </div>
+        
+
       </div>
-    </div>
+    </section>
   );
 };
 
