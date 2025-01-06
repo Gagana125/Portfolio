@@ -1,7 +1,3 @@
-/* h1, h2{
-    margin: 2vw;
-} */
-
 .details{
     color: rgb(0, 0, 0);
     justify-content: space-between;
@@ -73,4 +69,19 @@
 
 .resume-heading{
     margin-bottom: 2vh;
+}
+
+.tech-image{
+    width: 3vw;
+    height: 5vh;
+    margin-left: 0.5vw;
+}
+
+.tech-bar{
+    width: 100%;
+}
+
+.tech-bar-list{
+    display: flex;
+    margin-bottom: 1vh;
 }

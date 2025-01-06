@@ -1,11 +1,33 @@
 import React, { useEffect } from 'react';
 import '../css/Project1.css';
-import { Link } from 'react-router-dom';
+import TitleProject from '../UI/TitleProject';
+import AboutSection from '../UI/AboutSection';
+import GallerySection from '../UI/GallerySection';
+import FeatureSection from '../UI/FeatureSection';
 
-// useEffect(() => {
-//     // Scroll to the top of the page on route change
-//     window.scrollTo(0, 0);
-//   }, );
+const technologies = [
+    { name: "HTML", url: "/assets/html.png" },
+    { name: "CSS", url: "/assets/css-3.png" },
+    { name: "JavaScript", url: "/assets/js.png" },
+    { name: "MySQL", url: "/assets/mysql.png" },
+    { name: "PHP", url: "/assets/php.png" },
+  
+  ];
+  
+  const images = [
+    { image: "/assets/projects/1.jpg", alt: "Project Screenshot 1" },
+    { image: "/assets/projects/2.jpg", alt: "Project Screenshot 1" },
+    { image: "/assets/projects/3.jpg", alt: "Project Screenshot 1" },
+    { image: "/assets/projects/4.jpg", alt: "Project Screenshot 1" },
+    { image: "/assets/projects/5.jpg", alt: "Project Screenshot 1" },
+    { image: "/assets/projects/6.jpg", alt: "Project Screenshot 1" },
+  ];
+  
+  const features = [
+    "Upload and download teaching materials." ,
+    "Check the availability and reserve slots for classes." ,
+    "Enrollments and payment for classes." ,
+  ];
 
 const Project1 = () => {
     useEffect(() => {
@@ -14,48 +36,22 @@ const Project1 = () => {
       }, );
     return (
         <div className="project-detail">
-            <h2>Interlearn - Institute Management System</h2>
-            <div className='project-content-outline'>
-                <div className='project-images'>
-                    <img src="/assets/projects/1.jpg" alt="Project 1" className="project-image" />
-                    <img src="/assets/projects/2.jpg" alt="Project 1" className="project-image" />
-                    <img src="/assets/projects/3.jpg" alt="Project 1" className="project-image" />
-                    <img src="/assets/projects/4.jpg" alt="Project 1" className="project-image" />
-                    <img src="/assets/projects/5.jpg" alt="Project 1" className="project-image" />
-                    <img src="/assets/projects/6.jpg" alt="Project 1" className="project-image" />
-                </div>
-                <div className="project-content">
-                    <h3>About the Project</h3>
-                    <p>
-                        This is an institute management system where students can enroll in courses, and make payments online.
-                        And also the teachers can reserve an available slot for their classes and upload the teaching materials for the relevant class.
-                        The students can view the uploaded materials and download them.
-                    </p>
+        <TitleProject title="Interlearn - Institute Management System" motto="Make the move for a better life with us"/>
 
-                    <h3>My Role</h3>
-                    <p>Group leader and Full Stack developer</p>
+        <GallerySection images={images}/>
 
-                    <h3>Technologies Used</h3>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Javascript</li>
-                        <li>MySQL</li>
-                    </ul>
+        <AboutSection 
+            description="This is an institute management system where students can enroll in courses, and make payments online.
+            And also the teachers can reserve an available slot for their classes and upload the teaching materials for the relevant class.
+            The students can view the uploaded materials and download them."
+            role="Group leader and Full Stack developer"
+            technologies={technologies}
+        />
 
-                    <h4>Github Repository - <Link to={`https://github.com/Dhatchaya/Interlearn-`}>interlearn</Link></h4>
-
-                    <h3>Key Features</h3>
-                    <ul>
-                        <li>Upload and download teaching materials.</li>
-                        <li>Check the availability and reserve slots for classes.</li>
-                        <li>Enrollments and payment for classes.</li>
-                    </ul>
-                </div>
-            </div>
-
-
+        <FeatureSection link="https://github.com/Dhatchaya/Interlearn-" features={features} />
         </div>
+
+       
     );
 };
 
