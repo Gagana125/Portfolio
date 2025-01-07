@@ -9,7 +9,6 @@ const Contact = () => {
       <div className="contact-img-container">
         <img className="contact-img" src="./assets/cont2.jpg" alt="" />
         </div>
-        {/* Contact Info */}
         <div className="contact-info">
           <ul>
             <li>

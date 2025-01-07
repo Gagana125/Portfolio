@@ -28,7 +28,7 @@ const projectsData = [
     image: '/assets/projects/11.png',
     title: 'Illumination for App based AR - Research Project',
     description: 'This research focuses on enhancing the realism of app-based Augmented Reality (AR) by dynamically identifying physical light sources and applying them in real time to render virtual objects with realistic shadows and reflections. Using only a mobile phone, the study leverages ARCore, and image processing to determine light direction from a live video stream. ',
-    reverse: false,
+    reverse: true,
   },
 ];
 
@@ -43,7 +43,8 @@ function Projects() {
             image={project.image}
             title={project.title}
             paragraph={project.description}
-            link={`/projects/${project.id}`} />
+            link={`/projects/${project.id}`} 
+            reverse={project.reverse} />
         ))}
       </div>
     </section>

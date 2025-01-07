@@ -21,16 +21,14 @@ const About = () => {
             I bring this same dedication and enthusiasm to all my projects and look forward to contributing to exciting challenges in both AR and web development.
           </p>
           <p>
-          In addition to my technical expertise, I pride myself on being a determined and goal-oriented individual who thrives in dynamic environments. 
-          I am eager to apply my skills and experiences to develop innovative solutions, contribute to impactful projects, and grow as a professional in the tech industry.
+            In addition to my technical expertise, I pride myself on being a determined and goal-oriented individual who thrives in dynamic environments. 
+            I am eager to apply my skills and experiences to develop innovative solutions, contribute to impactful projects, and grow as a professional in the tech industry.
           </p>
         </div>
-        <div className="about-img">
+        <div className='about-img'>
           <img className="about-image" src="/assets/bg2.jpg" alt="Gagana Samarasekara" />
         </div>
       </div>
-
-
     </section>
   );
 };

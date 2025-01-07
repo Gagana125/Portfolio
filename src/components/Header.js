@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleScroll = () => {
     const sections = document.querySelectorAll('section');
     const scrollPosition = window.scrollY + window.innerHeight / 2;
-    // console.log(self.offsetHeight);
 
     sections.forEach((section) => {
       const offsetTop = section.offsetTop;
@@ -28,19 +28,27 @@ const Header = () => {
   return (
     <nav className="navbar">
       <h1 className="logo">GAGANA</h1>
-      <ul className="nav-links">
+      <div
+        className={`hamburger ${isMenuOpen ? 'open' : ''}`}
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul className={`nav-links ${isMenuOpen ? 'nav-open' : ''}`}>
         {['home', 'about', 'resume', 'projects', 'contact'].map((section) => (
           <li
             key={section}
             className={activeSection === section ? 'active' : ''}
+            onClick={() => setIsMenuOpen(false)} // Close menu on selection
           >
             <Link
-              // to={section === 'home' ? `/` : `${section}`}
               to={`/`}
               onClick={() => {
-                document.getElementById(section).scrollIntoView({ behavior: 'smooth', block: 'start', 
-                  inline: 'nearest' });
-                console.log(`Navigated to ${section}`);
+                document
+                  .getElementById(section)
+                  .scrollIntoView({ behavior: 'smooth', block: 'start' });
               }}
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -48,11 +56,9 @@ const Header = () => {
           </li>
         ))}
       </ul>
-      {/* <button className="cv-btn"> */}
       <a href="./assets/myfile.pdf" download>
-    <button className="cv-btn">Download CV</button>
-  </a>
-        {/* Download CV</button> */}
+        <button className="cv-btn">Download CV</button>
+      </a>
     </nav>
   );
 };
